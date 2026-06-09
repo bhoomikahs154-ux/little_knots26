@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="products-section">
+
+    <h2>Our Keychains</h2>
+
+    <p>
+        Handmade crochet keychains crafted with love.
+    </p>
+
+    <div class="products-grid">
+
+        {% for product in products %}
+
+        <div class="product-card">
+
+            <div class="image-container">
+
+                <img src="{{ url_for(
+                    'static',
+                    filename='images/products/' + product.image
+                ) }}">
+
+                <a
+                    <a href="https://www.instagram.com/little_knots26"
+                      target="_blank"
+                        class="hover-enquire">
+
+   
+
+                    Enquire
+
+                </a>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>{{ product.name }}</h3>
+
+                <p class="price">
+                    {{ product.price }}
+                </p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/bhoom/AppData/Local/Temp/4b850c38-7a8d-46ed-880d-b789e4292e17_stm32cube_fw_f4_v1280.zip.e17/STM32Cube_FW_F4_V1.28.0/Projects/STM32F413ZH-Nucleo/Examples/PWR/PWR_CurrentConsumption/Src",
+      "program": "c:/Users/bhoom/AppData/Local/Temp/4b850c38-7a8d-46ed-880d-b789e4292e17_stm32cube_fw_f4_v1280.zip.e17/STM32Cube_FW_F4_V1.28.0/Projects/STM32F413ZH-Nucleo/Examples/PWR/PWR_CurrentConsumption/Src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

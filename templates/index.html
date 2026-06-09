@@ -1,0 +1,249 @@
+```html
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-image">
+
+        <img src="{{ url_for('static',
+        filename='images/hero.jpg') }}"
+        alt="Little Knots">
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <h3>
+            Handmade with love,
+        </h3>
+
+        <h1>
+            just for you ♡
+        </h1>
+
+        <p>
+
+            Every stitch and every loop is crafted
+            with care.
+
+            Thank you for supporting handmade
+            creations.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="https://www.instagram.com/little_knots26"
+               target="_blank"
+               class="instagram-btn">
+
+                <i class="fab fa-instagram"></i>
+
+                Follow Us on Instagram
+
+            </a>
+
+
+            <a href="#categories"
+               class="shop-btn">
+
+                Shop Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CATEGORY SECTION -->
+
+<section class="products-section"
+         id="categories">
+
+    <h2>
+        Shop by Category
+    </h2>
+
+    <p>
+
+        Explore our handmade crochet
+        collections.
+
+    </p>
+
+
+    <div class="category-grid">
+
+
+        <a href="{{ url_for('keychains') }}"
+           class="category-card">
+
+            <img src="{{ url_for(
+                'static',
+                filename='images/products/flower.jpg'
+            ) }}">
+
+            <div class="category-overlay">
+
+                <h3>
+                    Keychains
+                </h3>
+
+                <span>
+                    Browse Collection →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="{{ url_for('bouquets') }}"
+           class="category-card">
+
+            <img src="{{ url_for(
+                'static',
+                filename='images/products/bouquet.jpg'
+            ) }}">
+
+            <div class="category-overlay">
+
+                <h3>
+                    Bouquets
+                </h3>
+
+                <span>
+                    Browse Collection →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="{{ url_for('others') }}"
+           class="category-card">
+
+            <img src="{{ url_for(
+                'static',
+                filename='images/products/pot.jpeg'
+            ) }}">
+
+            <div class="category-overlay">
+
+                <h3>
+                    Others
+                </h3>
+
+                <span>
+                    Browse Collection →
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT SECTION -->
+
+<section class="about-section"
+         id="about">
+
+    <div class="about-content">
+
+        <div>
+
+            <h2>
+                About Little Knots
+            </h2>
+
+            <p>
+
+                At Little Knot, every creation is
+                handcrafted with love, patience,
+                and passion.
+
+                From adorable keychains to elegant
+                bouquets, each piece is made to
+                bring a little happiness into
+                your life.
+
+            </p>
+
+        </div>
+
+
+        <a href="https://www.instagram.com/little_knots26"
+           target="_blank"
+           class="instagram-btn">
+
+            Know More About Us
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOUNDER SECTION -->
+
+<section class="founder-section">
+
+    <div class="founder-container">
+
+        <div class="founder-image">
+
+            <img src="{{ url_for('static',
+            filename='images/founder.jpg') }}"
+            alt="Founder of Little Knots">
+
+        </div>
+
+        <div class="founder-content">
+
+            <h2>
+                Meet the Founder
+            </h2>
+
+            <h3>
+                Bhoomi • Engineer • Crochet Artist • Founder
+            </h3>
+
+            <p>
+
+                Hi, I'm Bhoomi — an engineer by profession and a crochet artist at heart.
+
+                Little Knots started as a creative escape and slowly grew into a small business built with love, patience, and countless stitches.
+
+                Every bouquet, keychain, and handmade creation is thoughtfully crafted to bring joy to someone special.
+
+                Thank you for supporting my dream and appreciating the beauty of handmade art.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+

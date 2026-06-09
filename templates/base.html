@@ -1,0 +1,178 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Little Knots</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo-section">
+
+        <img src="{{ url_for('static',
+            filename='images/logo.png') }}"
+            alt="Little Knots Logo">
+
+        <div>
+
+            <h2>Little Knots</h2>
+
+            <p class="logo-tagline">
+                Crochet Creations
+            </p>
+
+        </div>
+
+    </div>
+
+    <ul class="nav-links">
+
+    <li>
+        <a href="{{ url_for('home') }}">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="#categories">
+            Products
+        </a>
+    </li>
+
+    <li>
+        <a href="#about">
+            About
+        </a>
+    </li>
+
+    
+
+</ul>
+</nav>
+
+
+<!-- PAGE CONTENT -->
+
+{% block content %}
+{% endblock %}
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>Little Knots</h3>
+
+            <p>
+                Handmade crochet creations crafted
+                with love and care.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="https://www.instagram.com/little_knots26"
+                   target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+         Made with love   by Little Knots.
+        
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING INSTAGRAM BUTTON -->
+
+<a href="https://www.instagram.com/little_knots26"
+   class="instagram-float"
+   target="_blank">
+
+    <i class="fab fa-instagram"></i>
+
+</a>
+
+
+<!-- SCROLL TO TOP -->
+
+<button id="topBtn">
+
+    ↑
+
+</button>
+
+
+<script>
+
+window.onscroll = function() {
+
+    let btn =
+    document.getElementById("topBtn");
+
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
+
+        btn.style.display = "block";
+
+    } else {
+
+        btn.style.display = "none";
+
+    }
+};
+
+
+document.getElementById("topBtn")
+.addEventListener("click", function(){
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
+```
