@@ -1100,3 +1100,40 @@ footer{
         justify-content: center;
     }
 }
+.whatsapp-float {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 100px;
+
+    width: 65px;
+
+    height: 65px;
+
+    background: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+
+    transform: translateY(-5px);
+}
