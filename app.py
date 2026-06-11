@@ -15,12 +15,12 @@ def keychains():
 
         {
             "name": "Sunflower Keychain",
-            "price": "₹149",
+            "price": "₹169",
             "image": "flower.jpg"
         },
         {
             "name": "Sunflower Keychain",
-            "price": "₹149",
+            "price": "₹169",
             "image": "sunflower.jpg"
         }, 
 
