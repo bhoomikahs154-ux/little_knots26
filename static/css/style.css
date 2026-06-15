@@ -1486,3 +1486,42 @@ footer{
         font-size: 32px;
     }
 }
+
+.quantity-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.quantity-controls button {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #b497d6;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.quantity-controls span {
+
+    font-weight: 600;
+
+    min-width: 20px;
+
+    text-align: center;
+}

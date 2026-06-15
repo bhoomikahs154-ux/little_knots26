@@ -31,16 +31,22 @@
                     filename='images/products/' + product.image
                 ) }}"
                 alt="{{ product.name }}">
-<button class="hover-enquire"
+<div class="wishlist-actions">
+
+    
+
+    <button class="hover-enquire"
 
         onclick="addToWishlist(
             '{{ product.name }}',
             '{{ product.price }}'
         )">
 
-    Add to Wishlist❤️
+   Add to Wishlist ❤️ 
 
 </button>
+
+</div>
 
             </div>
 

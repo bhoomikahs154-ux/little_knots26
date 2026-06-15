@@ -38,16 +38,30 @@ function updateWishlist() {
 
 function addToWishlist(name, price) {
 
-    wishlist.push({
-        name: name,
-        price: price
-    });
+    let existingItem = wishlist.find(
+        item => item.name === name
+    );
+
+    if (existingItem) {
+
+        existingItem.quantity += 1;
+
+    } else {
+
+        wishlist.push({
+
+            name: name,
+
+            price: price,
+
+            quantity: 1
+        });
+    }
 
     updateWishlist();
 
     alert(name + " added to wishlist ❤️");
 }
-
 function openWishlist() {
 
     let modal =
@@ -70,9 +84,31 @@ function openWishlist() {
 
             <div>
 
-                ${item.name}<br>
+               ${item.name}<br>
 
-                ${item.price}
+${item.price}<br>
+
+<div class="quantity-controls">
+
+    <button onclick="changeQuantity(${index}, -1)">
+
+        -
+
+    </button>
+
+    <span>
+
+        ${item.quantity}
+
+    </span>
+
+    <button onclick="changeQuantity(${index}, 1)">
+
+        +
+
+    </button>
+
+</div>
 
             </div>
 
@@ -100,7 +136,19 @@ function removeItem(index) {
 
     openWishlist();
 }
+function changeQuantity(index, change) {
 
+    wishlist[index].quantity += change;
+
+    if (wishlist[index].quantity <= 0) {
+
+        wishlist.splice(index, 1);
+    }
+
+    updateWishlist();
+
+    openWishlist();
+}
 function sendWishlist() {
 
     if (wishlist.length === 0) {
@@ -121,13 +169,24 @@ function sendWishlist() {
     wishlist.forEach(item => {
 
         message +=
-        " Product: " +
-        item.name +
-         "%0A" +
 
-        " Price: " +
-        item.price +
-        "%0A%0A";
+" Product: " +
+
+item.name +
+
+"%0A" +
+
+" Price: " +
+
+item.price +
+
+"%0A" +
+
+" Quantity: " +
+
+item.quantity +
+
+"%0A%0A";
     });
 
     message +=

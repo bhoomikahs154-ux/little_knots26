@@ -17,13 +17,14 @@
         <div class="product-card">
 
             <div class="image-container">
-           <button class="wishlist-btn"
+           <<button class="hover-enquire"
+
         onclick="addToWishlist(
             '{{ product.name }}',
             '{{ product.price }}'
         )">
 
-    ♡
+     Add to Wishlist ❤️ 
 
 </button>
                 <img src="{{ url_for(
@@ -32,16 +33,24 @@
                 ) }}"
                 alt="{{ product.name }}">
 
-                <button class="hover-enquire"
+                <div class="wishlist-actions">
 
-        onclick="addToWishlist(
-            '{{ product.name }}',
-            '{{ product.price }}'
-        )">
+    
+    <button class="hover-enquire"
 
-     Add to Wishlist❤️
+            onclick="addToWishlist(
+                '{{ product.name }}',
+                '{{ product.price }}',
+                document.getElementById(
+                    'qty-{{ loop.index }}'
+                ).value
+            )">
 
-</button>
+         Add to Wishlist❤️
+
+    </button>
+
+</div>
 
             </div>
 
