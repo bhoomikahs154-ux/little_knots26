@@ -232,8 +232,8 @@ def bouquets():
         }
        ,
         {
-            "name": " Rose-lilly  Bouquet",
-            "price": "₹",
+            "name": " Coustomized Rose-lilly  Bouquet",
+            
             "image": "rose-lilly.jpeg"
         }
 
@@ -269,7 +269,10 @@ def others():
 
     ]
     return render_template("others.html", products=products)
-
+    
+@app.route("/how-to-order")
+def how_to_order():
+    return render_template("how-to-order.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

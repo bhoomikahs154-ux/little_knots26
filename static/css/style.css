@@ -1100,7 +1100,7 @@ footer{
         justify-content: center;
     }
 }
-.whatsapp-float {
+/* .whatsapp-float {
 
     position: fixed;
 
@@ -1131,9 +1131,358 @@ footer{
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 
     z-index: 999;
-}
+} */
 
 .whatsapp-float:hover {
 
     transform: translateY(-5px);
+}
+/* WISHLIST HEART BUTTON */
+
+.wishlist-btn {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+
+    transform: scale(1.1);
+}
+
+/* FLOATING WISHLIST BUTTON */
+
+.wishlist-float {
+
+    position: fixed;
+
+    bottom: 110px;   /* Moves it above WhatsApp */
+    right: 30px;
+
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #b497d6;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* WISHLIST MODAL */
+
+.wishlist-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 2000;
+}
+
+.wishlist-content {
+
+    background: white;
+
+    width: 90%;
+    max-width: 400px;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    border-radius: 20px;
+}
+
+.wishlist-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 15px 0;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.remove-btn {
+
+    border: none;
+
+    background: none;
+
+    color: red;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.whatsapp-order {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+.how-order-section {
+
+    padding: 80px 20px;
+
+    background: #fdf8ff;
+}
+
+.order-container {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.order-container h1 {
+
+    text-align: center;
+
+    color: #9b7fc5;
+
+    margin-bottom: 20px;
+}
+
+.order-intro {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    color: #666;
+}
+
+.order-step {
+
+    display: flex;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.order-step span {
+
+    font-size: 35px;
+}
+
+.order-note {
+
+    margin-top: 40px;
+
+    text-align: center;
+
+    background: #b497d6;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+}
+
+/* HOW TO ORDER PAGE */
+
+.how-to-order-section {
+
+    padding: 80px 20px;
+
+    background: #f9f3fc;
+
+    min-height: 100vh;
+}
+
+.order-container {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.order-container h1 {
+
+    text-align: center;
+
+    color: #9b7fc5;
+
+    margin-bottom: 15px;
+
+    font-size: 42px;
+}
+
+.order-intro {
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 50px;
+
+    font-size: 18px;
+}
+
+.order-step {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.step-number {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #b497d6;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    flex-shrink: 0;
+}
+
+.order-step h3 {
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+.order-step p {
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+.custom-note {
+
+    margin-top: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #b497d6,
+        #d5b6f2
+    );
+
+    color: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.custom-note h2 {
+
+    margin-bottom: 15px;
+}
+
+.custom-note p {
+
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+    .order-step {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .order-container h1 {
+
+        font-size: 32px;
+    }
 }

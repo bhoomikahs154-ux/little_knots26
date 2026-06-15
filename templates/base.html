@@ -15,10 +15,154 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<script>
 
+let wishlist =
+JSON.parse(localStorage.getItem("wishlist")) || [];
+
+function updateWishlist() {
+
+    document.getElementById(
+        "wishlist-count"
+    ).innerText = wishlist.length;
+
+    document.getElementById(
+        "wishlist-count-nav"
+    ).innerText = wishlist.length;
+
+    localStorage.setItem(
+        "wishlist",
+        JSON.stringify(wishlist)
+    );
+}
+
+function addToWishlist(name, price) {
+
+    wishlist.push({
+        name: name,
+        price: price
+    });
+
+    updateWishlist();
+
+    alert(name + " added to wishlist ❤️");
+}
+
+function openWishlist() {
+
+    let modal =
+    document.getElementById(
+        "wishlist-modal"
+    );
+
+    let items =
+    document.getElementById(
+        "wishlist-items"
+    );
+
+    items.innerHTML = "";
+
+    wishlist.forEach((item, index) => {
+
+        items.innerHTML += `
+
+        <div class="wishlist-item">
+
+            <div>
+
+                ${item.name}<br>
+
+                ${item.price}
+
+            </div>
+
+            <button
+                class="remove-btn"
+
+                onclick="removeItem(${index})">
+
+                ❌
+
+            </button>
+
+        </div>
+        `;
+    });
+
+    modal.style.display = "block";
+}
+
+function removeItem(index) {
+
+    wishlist.splice(index, 1);
+
+    updateWishlist();
+
+    openWishlist();
+}
+
+function sendWishlist() {
+
+    if (wishlist.length === 0) {
+
+        alert(
+            "Wishlist is empty!"
+        );
+
+        return;
+    }
+
+    let message =
+    "Hello Little Knots! %0A%0A";
+
+    message +=
+    "I would like to enquire about:%0A%0A";
+
+    wishlist.forEach(item => {
+
+        message +=
+        " Product: " +
+        item.name +
+         "%0A" +
+
+        " Price: " +
+        item.price +
+        "%0A%0A";
+    });
+
+    message +=
+    "%0ACould you please share more details? Thank you! ";
+
+    window.open(
+
+        "https://wa.me/917022699321?text=" +
+
+        message,
+
+        "_blank"
+    );
+}
+
+window.onclick = function(event) {
+
+    let modal =
+    document.getElementById(
+        "wishlist-modal"
+    );
+
+    if (event.target == modal) {
+
+        modal.style.display = "none";
+    }
+}
+
+updateWishlist();
+
+</script>
 <body>
 
 <!-- NAVBAR -->
+
 
 <nav class="navbar">
 
@@ -42,29 +186,59 @@
 
     <ul class="nav-links">
 
-    <li>
-        <a href="{{ url_for('home') }}">
-            Home
-        </a>
-    </li>
+        <li>
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+        </li>
 
-    <li>
-        <a href="#categories">
-            Products
-        </a>
-    </li>
+        {% if request.endpoint == 'home' %}
 
-    <li>
-        <a href="#about">
-            About
-        </a>
-    </li>
+            <li>
+                <a href="#categories">
+                    Products
+                </a>
+            </li>
 
-    
+            <li>
+                <a href="{{ url_for('how_to_order') }}">
+                    How to Order
+                </a>
+            </li>
 
-</ul>
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="javascript:void(0);"
+                   onclick="openWishlist()">
+
+                    Wishlist ❤️
+                    (<span id="wishlist-count-nav">0</span>)
+
+                </a>
+            </li>
+
+        {% elif request.endpoint != 'how_to_order' %}
+
+            <li>
+                <a href="javascript:void(0);"
+                   onclick="openWishlist()">
+
+                    Wishlist ❤️
+                    (<span id="wishlist-count-nav">0</span>)
+
+                </a>
+            </li>
+
+        {% endif %}
+
+    </ul>
+
 </nav>
-
 
 <!-- PAGE CONTENT -->
 
@@ -116,7 +290,7 @@
 
     <div class="copyright">
 
-         Made with love   by Little Knots.
+         Made with love  ❤️  by Little Knots.
         
 
     </div>
@@ -140,6 +314,35 @@
     <i class="fab fa-whatsapp"></i>
 
 </a>
+<button class="wishlist-float"
+        onclick="openWishlist()">
+
+    ❤️ <span id="wishlist-count">0</span>
+
+</button> 
+<div id="wishlist-modal"
+     class="wishlist-modal">
+
+    <div class="wishlist-content">
+
+        <h2>
+            My Wishlist ❤️
+        </h2>
+
+        <div id="wishlist-items">
+
+        </div>
+
+        <button class="whatsapp-order"
+                onclick="sendWishlist()">
+
+            Enquire on WhatsApp
+
+        </button>
+
+    </div>
+
+</div>
 
 <!-- SCROLL TO TOP -->
 
