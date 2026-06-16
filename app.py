@@ -102,7 +102,7 @@ def keychains():
         }
         , 
         {
-            "name": "HeartS Keychains",
+            "name": "Hearts Keychains",
             "price": "₹199 each",
             "image": "heart2.jpeg"
         }, 
