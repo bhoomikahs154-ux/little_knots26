@@ -864,20 +864,15 @@ footer{
    MOBILE RESPONSIVE
 ========================================== */
 
-@media (max-width: 768px) {
+@media(max-width:992px){
 
-    .hero {
+    .hero{
 
-        display: flex;
+        grid-template-columns:1fr;
 
-        flex-direction: column;
-
-        justify-content: center;
-
-        text-align: center;
-
-        padding: 280px 20px 100px;
+        text-align:center;
     }
+
     .hero-content p{
 
         margin:auto;
@@ -897,15 +892,19 @@ footer{
 }
 
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    .navbar{
+    .hero {
 
-        flex-direction:column;
+        display: flex;
 
-        gap:20px;
+        flex-direction: column;
 
-        padding:20px;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 280px 20px 100px;
     }
 
     .nav-links{
