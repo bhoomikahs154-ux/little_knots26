@@ -247,9 +247,35 @@ def bouquets():
 @app.route("/others")
 def others():
     products = [
+        
+         {
+            "name": "3 hearts Hair Clip",
+            "price": "₹49",
+            "image": "clip1.jpeg"
+        },
+        {
+            "name": " Baby pink heart Hair Clip",
+            "price": "₹49",
+            "image": "clip2.jpeg"
+        },
+        {
+            "name": "White daisy Hair Clip",
+            "price": "₹49",
+            "image": "clip3.jpeg"
+        },
+        {
+            "name": "Voilet daisy Hair Clip",
+            "price": "₹49",
+            "image": "clip4.jpeg"
+        },
+        {
+            "name": " Bow Hair Clip",
+            "price": "₹49",
+            "image": "clip5.jpeg"
+        },
        {
             "name": " Sun Flower Pot",
-            "price": "₹349 + Shipping",
+            "price": "₹349 ",
             "image": "pot.jpeg"
         },
 
@@ -264,6 +290,7 @@ def others():
             "price": "₹399",
             "image": "car charm.jpeg"
         },
+        
         
 
 
