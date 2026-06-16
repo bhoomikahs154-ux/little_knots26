@@ -859,37 +859,125 @@ footer{
     box-shadow:var(--shadow);
 }
 
-
 /* ==========================================
    MOBILE RESPONSIVE
 ========================================== */
-@media(max-width:992px){
 
-    .hero{
+@media (max-width: 992px) {
 
-        text-align:center;
+    /* Hero Section */
+
+    .hero {
+
+        text-align: center;
     }
 
-    .hero-content p{
+    .hero-content p {
 
-        margin:auto;
+        margin: auto;
     }
 
-    .hero-buttons{
+    .hero-buttons {
 
-        justify-content:center;
+        justify-content: center;
     }
 
-    .about-content{
+    /* About Section */
 
-        grid-template-columns:1fr;
+    .about-content {
 
-        text-align:center;
+        grid-template-columns: 1fr;
+
+        text-align: center;
     }
 }
 
 
 @media (max-width: 768px) {
+
+    /* ==========================
+       NAVBAR
+    ========================== */
+
+    .navbar {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 15px;
+
+        gap: 20px;
+    }
+
+    /* Logo Section */
+
+    .logo-section {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .logo-section img {
+
+        width: 80px;
+
+        height: 80px;
+
+        margin-bottom: 10px;
+    }
+
+    .logo-section h2 {
+
+        font-size: 3rem;
+
+        margin: 0;
+    }
+
+    .logo-tagline {
+
+        font-size: 1.4rem;
+
+        margin-top: 5px;
+    }
+
+    /* Navigation Links */
+
+    .nav-links {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px 30px;
+
+        padding: 0;
+
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .nav-links li a {
+
+        font-size: 1.2rem;
+
+        font-weight: 600;
+    }
+
+
+    /* ==========================
+       HERO SECTION
+    ========================== */
 
     .hero {
 
@@ -899,38 +987,90 @@ footer{
 
         justify-content: center;
 
+        align-items: center;
+
         text-align: center;
 
-        padding: 280px 20px 100px;
+        padding: 80px 20px 100px;
     }
 
-    .nav-links{
+    .hero-content h1 {
 
-        flex-wrap:wrap;
+        font-size: 3rem;
 
-        justify-content:center;
-
-        gap:20px;
+        line-height: 1.2;
     }
 
-    .hero-content h1{
+    .hero-content p {
 
-        font-size:3rem;
+        font-size: 1.2rem;
     }
+
+
+    /* ==========================
+       SECTION HEADINGS
+    ========================== */
 
     .products-section h2,
-    .about-section h2{
+    .about-section h2 {
 
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
 
-    .category-card{
 
-        height:350px;
+    /* ==========================
+       CATEGORY CARDS
+    ========================== */
+
+    .category-card {
+
+        height: 350px;
+    }
+
+
+    /* ==========================
+       PRODUCTS GRID
+    ========================== */
+
+    .products-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .image-container img {
+
+        height: 180px;
+    }
+
+    .product-info {
+
+        padding: 12px;
+    }
+
+    .product-info h3 {
+
+        font-size: 1rem;
+    }
+
+    .price {
+
+        font-size: 1rem;
+    }
+
+
+    /* ==========================
+       WISHLIST & SOCIAL BUTTONS
+    ========================== */
+
+    .wishlist-float,
+    .instagram-float,
+    .whatsapp-float {
+
+        transform: scale(0.9);
     }
 }
-
-
 /* ==========================================
    FOUNDER SECTION
 ========================================== */
