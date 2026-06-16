@@ -863,12 +863,9 @@ footer{
 /* ==========================================
    MOBILE RESPONSIVE
 ========================================== */
-
 @media(max-width:992px){
 
     .hero{
-
-        grid-template-columns:1fr;
 
         text-align:center;
     }
