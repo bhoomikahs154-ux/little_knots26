@@ -17,38 +17,25 @@
         <div class="product-card">
 
             <div class="image-container">
-           <<button class="hover-enquire"
 
-        onclick="addToWishlist(
-            '{{ product.name }}',
-            '{{ product.price }}'
-        )">
-
-     Add to Wishlist ❤️ 
-
-</button>
                 <img src="{{ url_for(
                     'static',
                     filename='images/products/' + product.image
                 ) }}"
-                alt="{{ product.name }}">
+                alt="{{ product.name }}"
+                class="product-image">
 
-                <div class="wishlist-actions">
+                <button class="hover-enquire"
 
-    
-   
-    <button class="hover-enquire"
+                    onclick="event.stopPropagation();
+                             addToWishlist(
+                                '{{ product.name }}',
+                                '{{ product.price }}'
+                             )">
 
-        onclick="addToWishlist(
-            '{{ product.name }}',
-            '{{ product.price }}'
-        )">
+                    ❤️ Add to Wishlist
 
-   Add to Wishlist ❤️ 
-
-</button>
-
-</div>
+                </button>
 
             </div>
 
@@ -71,5 +58,38 @@
     </div>
 
 </section>
+
+<script>
+
+document.querySelectorAll('.image-container')
+.forEach(container => {
+
+    container.addEventListener('click', function(e) {
+
+        e.stopPropagation();
+
+        document.querySelectorAll('.image-container')
+        .forEach(c => {
+
+            if (c !== this) {
+
+                c.classList.remove('active');
+            }
+        });
+
+        this.classList.toggle('active');
+    });
+});
+
+document.addEventListener('click', function() {
+
+    document.querySelectorAll('.image-container')
+    .forEach(container => {
+
+        container.classList.remove('active');
+    });
+});
+
+</script>
 
 {% endblock %}

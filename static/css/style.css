@@ -382,12 +382,13 @@ rgba(255,255,255,.45)),
    CATEGORY SECTION
 ========================================== */
 
-.products-section{
+.products-section {
 
-    background:var(--light-lavender);
+    background: var(--light-lavender);
 
-    text-align:center;
-    padding-top: 40px;
+    text-align: center;
+
+    padding: 140px 8% 80px;
 }
 
 
@@ -506,153 +507,157 @@ rgba(255,255,255,.45)),
     opacity:.9;
 }
 
-
 /* ==========================================
    PRODUCT PAGES
 ========================================== */
 
-.products-grid{
+.products-grid {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit, minmax(280px, 1fr));
 
-    gap:35px;
+    gap: 35px;
 
-    margin-top:50px;
+    margin-top: 50px;
 }
 
+.product-card {
 
-.product-card{
+    background: white;
 
-    background:white;
+    border-radius: 30px;
 
-    border-radius:30px;
+    overflow: hidden;
 
-    overflow:hidden;
+    box-shadow: var(--shadow);
 
-    box-shadow:var(--shadow);
-
-    transition:.4s;
+    transition: 0.3s;
 }
 
+.product-card:hover {
 
-.product-card:hover{
-
-    transform:translateY(-10px);
+    transform: translateY(-5px);
 }
 
+/* Product Image */
 
-.image-container{
+.image-container {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
+
+    cursor: pointer;
 }
 
+.image-container img {
 
-.image-container img{
+    width: 100%;
 
-    width:100%;
+    height: 350px;
 
-    height:350px;
+    object-fit: cover;
 
-    object-fit:cover;
-
-    transition:.5s;
+    transition: 0.4s;
 }
 
+.image-container.active img {
 
-.image-container:hover img{
-
-    transform:scale(1.08);
+    transform: scale(1.05);
 }
 
+/* Dark Overlay */
 
-.image-container::before{
+.image-container::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    background:
-    rgba(0,0,0,.35);
+    background: rgba(0, 0, 0, 0.25);
 
-    opacity:0;
+    opacity: 0;
 
-    transition:.3s;
+    transition: 0.3s;
+
+    z-index: 1;
 }
 
+.image-container.active::before {
 
-.image-container:hover::before{
-
-    opacity:1;
+    opacity: 1;
 }
 
+/* Add to Wishlist Button */
 
-.hover-enquire{
+.hover-enquire {
 
-    position:absolute;
+    position: absolute;
 
-    top:50%;
-    left:50%;
+    top: 50%;
 
-    transform:
-    translate(-50%,-50%);
+    left: 50%;
 
-    background:var(--primary-lavender);
+    transform: translate(-50%, -50%);
 
-    color:white;
+    background: var(--primary-lavender);
 
-    padding:15px 30px;
+    color: white;
 
-    border-radius:50px;
+    border: none;
 
-    font-weight:600;
+    padding: 14px 22px;
 
-    opacity:0;
+    border-radius: 50px;
 
-    z-index:10;
+    font-weight: 600;
 
-    transition:.3s;
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 2;
 }
 
+.image-container.active .hover-enquire {
 
-.image-container:hover .hover-enquire{
+    opacity: 1;
 
-    opacity:1;
+    pointer-events: auto;
 }
 
+/* Product Details */
 
-.product-info{
+.product-info {
 
-    padding:25px;
+    padding: 20px;
 }
 
+.product-info h3 {
 
-.product-info h3{
+    font-family: 'Playfair Display', serif;
 
-    font-family:'Playfair Display',serif;
+    font-size: 1.5rem;
 
-    font-size:1.6rem;
-
-    margin-bottom:15px;
+    margin-bottom: 10px;
 }
 
+.price {
 
-.price{
+    color: var(--deep-lavender);
 
-    color:var(--deep-lavender);
+    font-size: 1.3rem;
 
-    font-size:1.4rem;
-
-    font-weight:700;
+    font-weight: 700;
 }
-
-
 /* ==========================================
    ABOUT SECTION
 ========================================== */
@@ -1063,7 +1068,6 @@ footer{
         font-size: 0.9rem;
     }
 }
-
 /* MOBILE HERO SECTION */
 
 @media (max-width: 768px) {
@@ -1138,36 +1142,7 @@ footer{
 
     transform: translateY(-5px);
 }
-/* WISHLIST HEART BUTTON */
 
-.wishlist-btn {
-
-    position: absolute;
-
-    top: 15px;
-    right: 15px;
-
-    width: 45px;
-    height: 45px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.9);
-
-    font-size: 22px;
-
-    cursor: pointer;
-
-    z-index: 3;
-
-    transition: 0.3s;
-}
-
-.wishlist-btn:hover {
-
-    transform: scale(1.1);
-}
 
 /* FLOATING WISHLIST BUTTON */
 
