@@ -215,14 +215,12 @@ a{
     position: relative;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
-    padding: 220px 20px 100px;
+    padding: 120px 20px;
 
     overflow: hidden;
 }
@@ -901,7 +899,7 @@ footer{
 
         text-align: center;
 
-        padding: 280px 20px 100px;
+      padding: 280px 20px 100px;
     }
 
     .nav-links{
