@@ -12,109 +12,10 @@ def home():
 def keychains():
 
     products = [
-
-        {
-            "name": "Flower Keychain",
-            "price": "₹169/-",
-            "image": "flower.jpg"
-        },
-        {
-            "name": "Sunflower Keychain",
-            "price": "₹169/-",
-            "image": "sunflower.jpg"
-        }, 
-
-        {
-            "name": "Evil Eye Keychain",
-            "price": "₹169/-",
-            "image": "evil eye.jpeg"
-        },
-
-        {
-            "name": "Bow Keychain[Blue]",
-            "price": "₹129/-",
-            "image": "bow.jpeg"
-        },
-
-        {
-            "name": "Bow Keychain[Pink]",
-            "price": "₹129/-",
-            "image": "pinkbow.jpeg"
-        },
-
-        {
-            "name": "Meshed Bow Keychain[Red]",
-            "price": "₹129/-",
-            "image": "meshed bow red.jpeg"
-        },
-
-        {
-            "name": "Meshed Bow Keychain",
-            "price": "₹129/-",
-            "image": "meshed bow.jpeg"
-        },
-
-        
-        {
-            "name": "Peacock feather Keychain",
-            "price": "₹169/-",
-            "image": "peacock feather.jpeg"
-        }, 
-        {
-            "name": "Penguin Keychain",
-            "price": "₹299/-",
-            "image": "penguin.jpeg"
-        }, 
-        {
-            "name": "White Bunny Keychain",
-            "price": "₹299/-",
-            "image": "bunny.jpeg"
-        }, 
-        {
-            "name": "Chick Keychain[Yellow]",
-            "price": "₹299/-",
-            "image": "chick.jpeg"
-        }, 
-        {
-            "name": "white Chick Keychain",
-            "price": "₹299/-",
-            "image": "white chick.jpeg"
-        }, 
-        {
-            "name": "Fish Keychain",
-            "price": "₹149/-",
-            "image": "fish.jpeg"
-        }, 
-        {
-            "name": "Rainbow Keychain",
-            "price": "₹169/-",
-            "image": "rainbow.jpeg"
-        }, 
-        {
-            "name": "Pink Heart Keychain",
-            "price": "₹199/-",
-            "image": "pinkheart.jpeg"
-        }, 
-        {
-            "name": "Red Heart Keychain",
-            "price": "₹199/-",
-            "image": "red heart.jpeg"
-        }
-        , 
-        {
-            "name": "Hearts Keychains",
-            "price": "₹199 each",
-            "image": "heart2.jpeg"
-        }, 
-        {
+          {
             "name": "Mini Red Heart Keychain",
-            "price": "₹99/-",
+            "price": "₹59/-",
             "image": "heart.jpeg"
-        }, 
-        {
-            "name": "Penguin Keychain",
-            "price": "₹299/-",
-            "image": "penguin2.jpeg"
         }, 
         {
             "name": "Octopus Keychain[White]",
@@ -138,6 +39,40 @@ def keychains():
             "image": "octo2.jpeg"
         }, 
         {
+            "name": "Bow Keychain[Blue]",
+            "price": "₹129/-",
+            "image": "bow.jpeg"
+        },
+
+        {
+            "name": "Bow Keychain[Pink]",
+            "price": "₹129/-",
+            "image": "pinkbow.jpeg"
+        },
+
+        {
+            "name": "Meshed Bow Keychain[Red]",
+            "price": "₹129/-",
+            "image": "meshed bow red.jpeg"
+        },
+
+        {
+            "name": "Meshed Bow Keychain",
+            "price": "₹129/-",
+            "image": "meshed bow.jpeg"
+        },
+        {
+            "name": "Fish Keychain",
+            "price": "₹129/-",
+            "image": "fish.jpeg"
+        }, 
+        {
+            "name": "Rainbow Keychain",
+            "price": "₹129/-",
+            "image": "rainbow.jpeg"
+        }, 
+        
+        {
             "name": "Daisy Keychain[cream]",
             "price": "₹129/-",
             "image": "daisy.jpeg"
@@ -151,6 +86,73 @@ def keychains():
             "name": "Daisy Keychain[Beige]",
             "price": "₹129/-",
             "image": "daisy2.jpeg"
+        }, 
+        
+        {
+            "name": "Flower Keychain",
+            "price": "₹169/-",
+            "image": "flower.jpg"
+        },
+        {
+            "name": "Sunflower Keychain",
+            "price": "₹169/-",
+            "image": "sunflower.jpg"
+        }, 
+
+        {
+            "name": "Evil Eye Keychain",
+            "price": "₹169/-",
+            "image": "evil eye.jpeg"
+        },
+
+        {
+            "name": "Peacock feather Keychain",
+            "price": "₹169/-",
+            "image": "peacock feather.jpeg"
+        }, 
+        
+        {
+            "name": "Pink Heart Keychain",
+            "price": "₹169/-",
+            "image": "pinkheart.jpeg"
+        }, 
+        {
+            "name": "Red Heart Keychain",
+            "price": "₹169/-",
+            "image": "red heart.jpeg"
+        }
+        , 
+        {
+            "name": "Hearts Keychains",
+            "price": "₹169 each",
+            "image": "heart2.jpeg"
+        }, 
+        {
+            "name": "White Bunny Keychain",
+            "price": "₹249/-",
+            "image": "bunny.jpeg"
+        }, 
+        {
+            "name": "Penguin Keychain",
+            "price": "₹299/-",
+            "image": "penguin.jpeg"
+        }, 
+        
+        {
+            "name": "Chick Keychain[Yellow]",
+            "price": "₹299/-",
+            "image": "chick.jpeg"
+        }, 
+        {
+            "name": "white Chick Keychain",
+            "price": "₹299/-",
+            "image": "white chick.jpeg"
+        }, 
+              
+        {
+            "name": "Penguin Keychain[Single peice]",
+            "price": "₹299/-",
+            "image": "penguin2.jpeg"
         }, 
         
         
