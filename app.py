@@ -98,7 +98,11 @@ def keychains():
             "price": "₹169/-",
             "image": "sunflower.jpg"
         }, 
-
+ {
+            "name": "sunflower Keychain[2 sunflower]",
+            "price": "₹299/-",
+            "image": "sunflower2.jpeg"
+        }, 
         {
             "name": "Evil Eye Keychain",
             "price": "₹169/-",
@@ -127,6 +131,8 @@ def keychains():
             "price": "₹169 each",
             "image": "heart2.jpeg"
         }, 
+              
+       
         {
             "name": "White Bunny Keychain",
             "price": "₹249/-",
@@ -148,7 +154,12 @@ def keychains():
             "price": "₹299/-",
             "image": "white chick.jpeg"
         }, 
-              
+                 
+        {
+            "name": "Teddy Keychain",
+            "price": "₹299/-",
+            "image": "teddy.jpeg"
+        },    
         {
             "name": "Penguin Keychain[Single peice]",
             "price": "₹299/-",
